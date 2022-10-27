@@ -3,7 +3,7 @@ const submitBtn = document.getElementById('submit');
 const answerP = document.getElementById('answer');
 const sectionPrompt = document.getElementById('prompt');
 const sectionFortune = document.getElementById('fortune');
-
+const refreshBtn = document.getElementById('refresh');
 /* State */
 
 /* Events */
@@ -32,8 +32,13 @@ const answers = [
 submitBtn.addEventListener('click', () => {
     sectionPrompt.classList.toggle('hide');
     sectionFortune.classList.toggle('hide');
-    /*const randInt = Math.floor(Math.random() * answers.length);
-    const randomChoice = answers[randInt]; */
+    const randInt = Math.floor(Math.random() * answers.length);
+    const randomChoice = answers[randInt];
+});
+
+refreshBtn.addEventListener('click', () => {
+    sectionPrompt.classList.toggle('hide');
+    sectionFortune.classList.toggle('hide');
 });
 /* Display Functions */
 
