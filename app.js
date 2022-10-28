@@ -34,6 +34,7 @@ submitBtn.addEventListener('click', () => {
     sectionFortune.classList.toggle('hide');
     const randInt = Math.floor(Math.random() * answers.length);
     const randomChoice = answers[randInt];
+    answerP.textContent = randomChoice;
 });
 
 refreshBtn.addEventListener('click', () => {
